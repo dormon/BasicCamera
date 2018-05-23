@@ -23,11 +23,11 @@ class BASICCAMERA_EXPORT basicCamera::PerspectiveCamera
   void              setAspect(float value);
 
  protected:
-  float     _near;
-  float     _far;
-  float     _fovy;
-  float     _aspect;
-  glm::mat4 _projection;
-  bool      _recompute;
+  float     _near = 1.f;
+  float     _far = 100.f; 
+  float     _fovy = glm::half_pi<float>();
+  float     _aspect = 1.f;
+  glm::mat4 _projection = glm::mat4(1.f);
+  bool      _recompute = true;
   void      _compute();
 };

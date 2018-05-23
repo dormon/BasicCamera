@@ -33,12 +33,12 @@ class BASICCAMERA_EXPORT basicCamera::OrbitCamera : public CameraTransform {
   void              addDistance(float value);
 
  protected:
-  float     _xAngle;
-  float     _yAngle;
-  float     _distance;
-  bool      _recompute;
-  glm::vec3 _position;
-  glm::mat4 _view;
-  glm::mat4 _rotation;
+  float     _xAngle    = 0.f;
+  float     _yAngle    = 0.f;
+  float     _distance  = 0.f;
+  bool      _recompute = true;
+  glm::vec3 _position  = glm::vec3(0.f);
+  glm::mat4 _view      = glm::mat4(1.f);
+  glm::mat4 _rotation  = glm::mat4(1.f);
   void      _compute();
 };

@@ -40,12 +40,12 @@ class BASICCAMERA_EXPORT basicCamera::FreeLookCamera : public CameraTransform {
   void setRotation(glm::vec3 const& viewVector, glm::vec3 const& upVector);
 
  protected:
-  glm::vec3 _angles;
-  bool      _recomputeView;
-  bool      _recomputeRotation;
-  glm::vec3 _position;
-  glm::mat4 _view;
-  glm::mat4 _rotation;
+  glm::vec3 _angles            = glm::vec3(0.f);
+  bool      _recomputeView     = true;
+  bool      _recomputeRotation = true;
+  glm::vec3 _position          = glm::vec3(0.f);
+  glm::mat4 _view              = glm::mat4(1.f);
+  glm::mat4 _rotation          = glm::mat4(1.f);
   void      _computeView();
   void      _computeRotation();
 };

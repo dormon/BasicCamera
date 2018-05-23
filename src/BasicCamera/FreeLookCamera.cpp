@@ -4,10 +4,7 @@
 
 using namespace basicCamera;
 
-FreeLookCamera::FreeLookCamera() : CameraTransform() {
-  _recomputeRotation = true;
-  _recomputeView     = true;
-}
+FreeLookCamera::FreeLookCamera() : CameraTransform() {}
 
 FreeLookCamera::~FreeLookCamera() {}
 
