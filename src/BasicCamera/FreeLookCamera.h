@@ -1,9 +1,6 @@
 #pragma once
 
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_access.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
 
 #include <BasicCamera/Camera.h>
 #include <BasicCamera/Fwd.h>
@@ -37,7 +34,7 @@ class BASICCAMERA_EXPORT basicCamera::FreeLookCamera : public CameraTransform {
   void              addYAngle(float delta);
   void              addZAngle(float delta);
   void              addAngle(size_t axis, float delta);
-  void setRotation(glm::vec3 const& viewVector, glm::vec3 const& upVector);
+  void setRotation(glm::vec3 const& viewVector,glm::vec3 const& upVector);
 
  protected:
   glm::vec3 _angles            = glm::vec3(0.f);
