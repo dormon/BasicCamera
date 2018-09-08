@@ -4,23 +4,23 @@
 #include <BasicCamera/Fwd.h>
 #include <BasicCamera/basiccamera_export.h>
 
-class BASICCAMERA_EXPORT basicCamera::PerspectiveCamera
+class basicCamera::PerspectiveCamera
     : public CameraProjection {
  public:
-  PerspectiveCamera(float fovy   = glm::radians(90.f),
+  BASICCAMERA_EXPORT PerspectiveCamera(float fovy   = glm::radians(90.f),
                     float aspect = 1024.f / 768.f,
                     float near   = 0.1f,
                     float far    = 1000.f);
-  virtual ~PerspectiveCamera();
-  virtual glm::mat4 getProjection();
-  float             getNear() const;
-  float             getFar() const;
-  float             getFovy() const;
-  float             getAspect() const;
-  void              setNear(float value);
-  void              setFar(float value);
-  void              setFovy(float value);
-  void              setAspect(float value);
+  BASICCAMERA_EXPORT virtual ~PerspectiveCamera();
+  BASICCAMERA_EXPORT virtual glm::mat4 getProjection();
+  BASICCAMERA_EXPORT float             getNear() const;
+  BASICCAMERA_EXPORT float             getFar() const;
+  BASICCAMERA_EXPORT float             getFovy() const;
+  BASICCAMERA_EXPORT float             getAspect() const;
+  BASICCAMERA_EXPORT void              setNear(float value);
+  BASICCAMERA_EXPORT void              setFar(float value);
+  BASICCAMERA_EXPORT void              setFovy(float value);
+  BASICCAMERA_EXPORT void              setAspect(float value);
 
  protected:
   float     _near = 1.f;

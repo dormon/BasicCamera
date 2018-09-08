@@ -6,35 +6,35 @@
 #include <BasicCamera/Fwd.h>
 #include <BasicCamera/basiccamera_export.h>
 
-class BASICCAMERA_EXPORT basicCamera::FreeLookCamera : public CameraTransform {
+class basicCamera::FreeLookCamera : public CameraTransform {
  public:
-  FreeLookCamera();
-  virtual ~FreeLookCamera();
-  virtual glm::mat4 getView();
-  glm::mat4         getRotation();
-  void              up(float dy);
-  void              down(float dy);
-  void              left(float dx);
-  void              right(float dx);
-  void              forward(float dz);
-  void              back(float dz);
-  void              move(size_t axis, float d);
-  void              setPosition(glm::vec3 const& p);
-  void              addPosition(glm::vec3 const& delta);
-  glm::vec3         getPosition() const;
-  float             getXAngle() const;
-  float             getYAngle() const;
-  float             getZAngle() const;
-  float             getAngle(size_t axis) const;
-  void              setXAngle(float value);
-  void              setYAngle(float value);
-  void              setZAngle(float value);
-  void              setAngle(size_t axis, float value);
-  void              addXAngle(float delta);
-  void              addYAngle(float delta);
-  void              addZAngle(float delta);
-  void              addAngle(size_t axis, float delta);
-  void setRotation(glm::vec3 const& viewVector,glm::vec3 const& upVector);
+  BASICCAMERA_EXPORT FreeLookCamera();
+  BASICCAMERA_EXPORT virtual ~FreeLookCamera();
+  BASICCAMERA_EXPORT virtual glm::mat4 getView();
+  BASICCAMERA_EXPORT glm::mat4         getRotation();
+  BASICCAMERA_EXPORT void              up(float dy);
+  BASICCAMERA_EXPORT void              down(float dy);
+  BASICCAMERA_EXPORT void              left(float dx);
+  BASICCAMERA_EXPORT void              right(float dx);
+  BASICCAMERA_EXPORT void              forward(float dz);
+  BASICCAMERA_EXPORT void              back(float dz);
+  BASICCAMERA_EXPORT void              move(size_t axis, float d);
+  BASICCAMERA_EXPORT void              setPosition(glm::vec3 const& p);
+  BASICCAMERA_EXPORT void              addPosition(glm::vec3 const& delta);
+  BASICCAMERA_EXPORT glm::vec3         getPosition() const;
+  BASICCAMERA_EXPORT float             getXAngle() const;
+  BASICCAMERA_EXPORT float             getYAngle() const;
+  BASICCAMERA_EXPORT float             getZAngle() const;
+  BASICCAMERA_EXPORT float             getAngle(size_t axis) const;
+  BASICCAMERA_EXPORT void              setXAngle(float value);
+  BASICCAMERA_EXPORT void              setYAngle(float value);
+  BASICCAMERA_EXPORT void              setZAngle(float value);
+  BASICCAMERA_EXPORT void              setAngle(size_t axis, float value);
+  BASICCAMERA_EXPORT void              addXAngle(float delta);
+  BASICCAMERA_EXPORT void              addYAngle(float delta);
+  BASICCAMERA_EXPORT void              addZAngle(float delta);
+  BASICCAMERA_EXPORT void              addAngle(size_t axis, float delta);
+  BASICCAMERA_EXPORT void setRotation(glm::vec3 const& viewVector,glm::vec3 const& upVector);
 
  protected:
   glm::vec3 _angles            = glm::vec3(0.f);
